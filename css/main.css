@@ -1,1 +1,25 @@
-body{width: 100vw; height: 2575px; background: url(../img/bg.jpg) no-repeat center top;}
+.wrap { width: 100%; max-width: 1440px; } 
+
+header { height: 100px; justify-content: center; line-height: 30px; display: flex; } 
+.logo { width: 80%; } 
+
+/* nav */
+.gnb { width: 80%; display: flex; } 
+.gnb a { width: 25%; display: block; text-align: center; padding: 2rem; } 
+main>.inner { position: relative; } 
+.slogan_box { height: 400px; background: sandybrown; } 
+.slogan_box p { font-size: 67px; line-height: 1.6; font-weight: 400; margin-bottom: 40px; } 
+.slogan_box .light { font-size: 25px; } 
+.slogan_box .general_btns { position: absolute; top: 280px; left: 0; display: flex; } 
+.general_btns a:nth-child(1) { margin:0 30px; } 
+.general_btns a { width: 100px; height: 40px; background: linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%
+ ); color: #fff; border-radius: 10px; padding: 1rem; text-align: center; line-height: 40px; } 
+
+/* about me */
+main .about .inner { display: flex; height: 100px; } 
+.about h2{width: 100%; margin-bottom: 4rem;}
+main .about1 { width: 50%; background: pink; } 
+.about2 { width: 50%; display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 20px;} 
+.about2 div p{line-height: 1.2;}
+.info_box {margin-bottom: 2rem;}
+.career_box {margin-bottom: 4rem;}
