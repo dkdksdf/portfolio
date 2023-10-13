@@ -19,14 +19,11 @@ header { height: 100px; justify-content: center; line-height: 30px; display: fle
 
 /* about me */
 main .about .inner { display: flex; height: 500px; } 
-.about h2{width: 100%; margin-bottom: 2rem;}
+.about h2{width: 100%; margin:auto 35rem; font-size: 4.5rem;}
 main .about1 { width: 50%; background: pink; } 
 .about2 { width: 50%; display: flex; flex-wrap: wrap; justify-content: center; column-gap: 15rem;} 
 .about2 div p{line-height: 1.2;}
-.info_box,
-.licence_box,
-.career_box,
-.education_box{border: solid 1px; border-radius: 10px;}
+
 
 .info_box {margin-bottom: 2rem;}
 .career_box {margin-bottom: 4rem;}
