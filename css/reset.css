@@ -1,5 +1,4 @@
-@charset "utf-8";
-/* http://meyerweb.com/eric/tools/css/reset/ 
+@charset "utf-8";/* http://meyerweb.com/eric/tools/css/reset/ 
  v2.0 | 20110126
  License: none (public domain)
 */
@@ -84,14 +83,7 @@ summary,
 time,
 mark,
 audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
+video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } 
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -104,97 +96,46 @@ header,
 hgroup,
 menu,
 nav,
-section {
-    display: block;
-}
+section { display: block; } 
 
-body {
-    line-height: 1;
-}
+body { line-height: 1; } 
 
 ol,
-ul {
-    list-style: none;
-}
+ul { list-style: none; } 
 
 blockquote,
-q {
-    quotes: none;
-}
+q { quotes: none; } 
 
 blockquote:before,
 blockquote:after,
 q:before,
-q:after {
-    content: '';
-    content: none;
-}
+q:after { content: ''; content: none; } 
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+table { border-collapse: collapse; border-spacing: 0; } 
 
 /* custom */
-*a {
-    box-sizing: border-box;
-}
+*a { box-sizing: border-box; } 
 
-/* :root {
-    --primary: #ff4713;
-    --secondary: #fbc9a0;
-    --text1: #ff4713;
-    --text2: #ff471399;    
-    --background: #fff;
-} */
+:root { --primary: #ff4713; --secondary: #fbc9a0; --text1: #1D1D28; --text2: #03045E; --Too-Light-Yellow: #F7F197; --background: #FBF8CC; } 
 
-html {
-    overflow-y: scroll;    
-    overflow-x: hidden;
-    font-size: 62.5%;    
-    line-height: 1.75;
-    font-weight: 400;
-}
+html { overflow-y: scroll; overflow-x: hidden; font-size: 62.5%; line-height: 1.75; font-weight: 400; } 
 
-body {
-    font-family: 'Popins', sans-serif;
-    color: var(--text1);
-    font-size: 1.6rem;
-}
+body { font-family: 'pretendard', sans-serif; color: var(--text1); font-size: 1.6rem; } 
 
-a {
-    text-decoration: none;
-    color: var(--text1);
-}
+a { text-decoration: none; color: var(--text1); } 
 
-a:hover {
-    text-decoration: underline;
-}
+a:hover { text-decoration: underline; } 
 
 h1,
-.h1 {
-    font-size: 3.1rem;
-    font-weight: 700;
-}
+.h1 { font-size: 3.1rem; font-weight: 700; } 
 
 h2,
-.h2 {
-    font-size: 2.5rem;
-    font-weight: 500;
-}
+.h2 { font-size: 100px;font-style: normal;font-weight: 800;line-height: 116px; color: var(--Too-Light-Yellow); } 
 
 h3,
-.h3 {
-    font-size: 2rem;
-    font-weight: 400;
-}
+.h3 { color: var(--text2); font-size: 30px;font-style: normal;font-weight: 400;line-height: 35.625px; /* 118.75% */
+letter-spacing: 10px; } 
 
-.caption {
-    font-size: 1.3rem;
-    font-weight: 400;
-}
+.caption { font-size: 1.3rem; font-weight: 400; } 
 
-.link {
-    font-size: 1.6rem;
-    font-weight: 500;
-}
+.link { font-size: 1.6rem; font-weight: 500; } 
