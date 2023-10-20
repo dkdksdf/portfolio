@@ -1,224 +1,483 @@
-@import url("https://fonts.googleapis.com/css?family=Poller+One|Arima+Madurai");
-
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-*:before,
-*:after {
-	position: absolute;
-	content: "";
-}
-
-:root {
-	/* CHANGE TO CONTROL SCALE */
-	--radius: 100px;
-	/* CHANGE BORDER SIZE TO VIEW GRID */
-	--sketch-grid: 0px dotted gray;
-	--color-top: #cca27c;
-	--color-bottom: #272727;
-	/* CHANGE TO CONTROL TIMING OF ANIMATION */
-	--animation-timing: 5s;
-}
-
-body {
+.wrap {
 	width: 100%;
-	height: 100vh;
+}
+
+.inner {
+	width: 100%;
+	max-width: 1440px;
+	margin: auto;
+}
+
+/* nav */
+nav {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	background: rgba(251, 248, 204, 0.5);
+	padding: 1em 1.4em;
+	width: 100%;
+}
+
+nav.sticky {
+	background: rgba(255, 0, 100, 0.6);
+	position: fixed;
+	z-index: 222;
+}
+
+nav .gnb {
 	display: flex;
-	flex-direction: column;
+	width: 100%;
+	max-width: 1440px;
+	margin: auto;
+	text-align: center;
+}
+
+nav .gnb li {
+	flex: 1 1 200px;
+}
+
+nav .gnb li a {
+	color: #fff;
+	display: inline-block;
+	padding: 0.2rem;
+	text-align: center;
+	line-height: 2rem;
+	height: 2rem;
+	position: relative;
+}
+
+nav .gnb li a:before,
+nav .gnb li a:after {
+	position: absolute;
+	content: '';
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #000;
+	transform: scaleX(0);
+	transition: all 0.5s;
+}
+
+nav .gnb li a:before {
+	top: 0;
+	transform-origin: left;
+}
+
+.gnb li a:after {
+	bottom: 0;
+	transform-origin: right;
+}
+
+nav .gnb li.on a:before,
+nav .gnb li a:hover:before,
+nav .gnb li.on a:after,
+nav .gnb li a:hover:after {
+	transform: scaleX(1);
+}
+
+/* sideNav */
+.sideNav {
+	position: fixed;
+	top: 10%;
+	right: 10%;
+	z-index: 999;
+}
+
+.sideNav a {
+	display: inline-block;
+	padding: 1em;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	margin-bottom: 1em;
+}
+
+.sideNav li.on a::before {
+	content: '🐱';
+}
+
+/* slogan */
+.bold {
+	color: var(--text2);
+	font-size: 5.5625rem;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 7.25rem;
+}
+
+.medium {
+	color: var(--text2);
+	font-size: 5.5625rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 7.25rem;
+	/* 130.337% */
+}
+
+.light {
+	color: var(--text2);
+	font-size: 1.75rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+header {
+	height: 100px;
+	justify-content: space-between;
+	line-height: 100px;
+	display: flex;
+	padding: 0 10rem;
+	position: relative;
+}
+
+.logo {
+	width: 50%;
 	justify-content: center;
 	align-items: center;
-	background: #e8e0d5;
 }
 
-#container {
-	width: calc(var(--radius) * 4);
-	height: calc(var(--radius) * 4);
+/* content */
+.content_box1 {
 	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.slogan_box {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 400px;
+	text-align: left;
+	align-items: flex-start;
 	justify-content: center;
-	border: var(--sketch-grid);
+	padding: 10rem 0;
+	gap: 0.6875rem;
 }
 
-p {
-	font-family: "Arima Madurai", sans-serif;
-	font-size: 12px;
-	border: var(--sketch-grid);
-	color: var(--color-top);
+.slogan_box p {
+	margin-bottom: 40px;
+}
+
+.slogan_box .general_btns {
+	display: flex;
+}
+
+.general_btns a:nth-child(1) {
+	margin-right: 1.5rem;
+}
+
+.general_btns a:nth-child(2) {
+	margin-right: 1.5rem;
+}
+
+.general_btns a {
+	width: 10.25rem;
+	height: 4.25rem;
+	line-height: 4rem;
+	flex-shrink: 0;
+	border: 1px solid #474306;
+	border-radius: 0.375rem;
 	text-align: center;
-	z-index: 100;
-	line-height: 1.25;
-	
-}
-
-p a:link, p a:visited {
-	text-decoration: underline;
-	color: var(--color-top);
-	transition: all 0.2s;
-}
-
-.lettering {
 	position: relative;
-	width: calc(var(--radius) * 2);
-	height: calc(var(--radius) * 2);
+}
+
+.general_btns a::before {
+	content: '';
+	width: 10.25rem;
+	height: 4.25rem;
+	line-height: 3rem;
+	flex-shrink: 0;
+	background: #F5EE84;
+	border-radius: 0.375rem;
+	position: absolute;
+	top: 10%;
+	right: 0;
+	left: 6px;
+	z-index: -1;
+}
+
+.main_img {
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: url(../img/bg.png) no-repeat;
+}
+
+.main_img img {
+	width: 50%;
+}
+
+/* about me */
+.content_box2 {
+	box-sizing: border-box;
+}
+
+.content_box2 h2 {
+	margin-bottom: 67px;
+}
+
+.resum_box {
+	width: 100%;
+	height: 400px;
+	display: flex;
+	gap: 50px;
+	justify-content: space-between;
+	text-align: left;
+}
+
+.resum_text {
+	display: flex;
+	padding: 0px 32px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.625rem;
+	align-self: stretch;
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 49.875px;
+	/* 207.813% */
+}
+
+.resum_text h3 {
+	position: relative;
+}
+
+.resum_text h3::before {
+	content: '';
+	width: 0.625rem;
+	height: 0.625rem;
+	background: var(--text2);
+	position: absolute;
+	top: 34%;
+	right: 110%;
 	border-radius: 50%;
-	border: var(--sketch-grid);
-	top: calc(var(--radius) * 0.2);
 }
 
-h2 {
-	border: var(--sketch-grid);
-	height: var(--radius);
-	color: var(--color-top);
-	font-family: "Poller One", sans-serif;
-	text-transform: uppercase;
+.text_box2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 50px;
 }
 
-h2 span {
-	font-size: calc(var(--radius) / 5);
-	height: var(--radius);
+/* content_box3 */
+.section1,
+.section2,.section3 {
+	position: relative;
+	height: 600px;
+}
+
+.section1 .container,
+.section2 .container,
+.section3 .container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.section1 .item,
+.section2 .item,
+.section3 .item {
 	position: absolute;
-	width: calc(var(--radius) / 5);
-	left: calc(var(--radius) - calc(calc(var(--radius) / 5) / 2));
 	top: 0;
-	transform-origin: bottom center;
-	border: var(--sketch-grid);
+	height: 30vw;
 }
 
-h2 .char1 {
-	transform: rotate(-32deg);
+.section1 .item.left,
+.section2 .item.left,
+.section3 .item.left {
+	width: 60%;
+	transition: left 1s ease-in-out;
+	left: -100%;
 }
 
-h2 .char2 {
-	transform: rotate(-24deg);
+.section1.is-animated .left,
+.section2.is-animated .left,
+.section3.is-animated .left {
+	left: 0 !important;
 }
 
-h2 .char3 {
-	transform: rotate(-12deg);
+.section1 .item.right,
+.section2 .item.right,
+.section3 .item.right {
+	width: 40%;
+	right: 0;
+	background: #fff;
 }
 
-h2 .char4 {
-	transform: rotate(-6deg);
-}
-
-h2 .char5 {
-	transform: rotate(6deg);
-}
-
-h2 .char6 {
-	transform: rotate(18deg);
-}
-
-h2 .char7 {
-	transform: rotate(32deg);
-}
-
-h1 {
-	font-family: "Arima Madurai", sans-serif;
-	border: var(--sketch-grid);
-	height: calc(var(--radius) * 3);
-	color: var(--color-bottom);
-	margin-top: calc(var(--radius) / -2);
-	width: calc(var(--radius) * 3);
-	margin-left: calc(var(--radius) / -2);
-	text-transform: uppercase;
-}
-
-h1 span {
-	font-size: calc(var(--radius) * 1.5);
-	height: auto;
-	line-height: calc(var(--radius) * 1.5);
+.left .mockup img,
+.left .mockup .mask {
 	position: absolute;
-	width: auto;
-	border: var(--sketch-grid);
-	animation: breathe ease-in-out infinite;
-	transition: font-weight 0.2s;
+	top: 0;
+	left: 0;
 }
 
-h1 span:nth-child(odd) {
-	animation-delay: 1s;
+.left .mockup.pc {
+	position: relative;
+	width: 60%;
+	height: 100%;
+	margin-left: 100px;
 }
 
-h1 span:nth-child(even) {
-	animation-delay: 1.5s;
+.screen,
+.device {
+	width: 100%;
 }
 
-h1 .char1 {
-	margin-left: calc(var(--radius) * 0.5);
-	margin-top: calc(var(--radius) * 0.1);
-	font-size: calc(var(--radius) * 1.2);
-	animation-duration: var(--animation-timing);
+.screen {
+	z-index: 3;
 }
 
-h1 .char2 {
-	margin-left: calc(var(--radius) * 0.8);
-	margin-top: calc(var(--radius) * 0.3);
-	font-size: calc(var(--radius) * 1.5);
-	animation-duration: calc(var(--animation-timing) * 1.2);
+.device {
+	z-index: 4;
 }
 
-h1 .char3 {
-	margin-left: calc(var(--radius) * 1.3);
-	margin-top: calc(var(--radius) * 0);
-	font-size: calc(var(--radius) * 1.5);
-	animation-duration: calc(var(--animation-timing) * 1.15);
+.section1 .mockup.pc .mask,
+.section2 .mockup.pc .mask,
+.section3 .mockup.pc .mask {
+	z-index: 8;
+	width: 24.3vw;
+	height: 46.8%;
+	overflow: hidden;
+	left: 5.2%;
+	top: 4%;
 }
 
-h1 .char4 {
-	margin-left: calc(var(--radius) * 2);
-	margin-top: calc(var(--radius) * 0.4);
-	font-size: calc(var(--radius) * 1.3);
-	animation-duration: calc(var(--animation-timing) * 1.3);
+/* mobile */
+.left .mockup.mobile {
+	position: relative;
+	width: 20%;
+	height: 60%;
+	top: -101%;
+	left: 70%;
+	z-index: 99;
 }
 
-h1 .char5 {
-	margin-left: calc(var(--radius) * -0.1);
-	margin-top: calc(var(--radius) * 1.2);
-	animation-duration: calc(var(--animation-timing) * 0.98);
-	font-size: calc(var(--radius) * 1.4);
+.left .mockup.mobile .mask {
+	z-index: 999;
+	width: 8vw;
+	height: 66%;
+	top: 17%;
+	left: 6%;
+	border-radius: 6px 6px 0 0;
+	overflow: hidden;
 }
 
-h1 .char6 {
-	margin-left: calc(var(--radius) * 0.7);
-	margin-top: calc(var(--radius) * 1.6);
-	animation-duration: calc(var(--animation-timing) * 1.25);
-	font-size: calc(var(--radius) * 1.2);
+/* tablet */
+.left .mockup.tablet {
+	position: relative;
+	width: 54%;
+	height: 60%;
+	top: -137%;
+	left: 37%;
+	z-index: 98;
 }
 
-h1 .char7 {
-	margin-left: calc(var(--radius) * 1.15);
-	margin-top: calc(var(--radius) * 1.7);
-	animation-duration: calc(var(--animation-timing) * 1.2);
-	font-size: calc(var(--radius) * 1.4);
+.left .mockup.tablet .mask {
+	z-index: 999;
+	width: 19.5vw;
+	height: 81%;
+	top: 7%;
+	left: 10%;
+	border-radius: 6px 6px 0 0;
+	overflow: hidden;
+}
+.project_sub { display: flex; flex-direction: column; align-items: center; justify-content: center; } 
+ .psi { width: 60%; text-align: center; box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08); } 
+ .psi img { width: 100%; } 
+
+ .pst { width: 40%; } 
+ .pst_sub { margin: 0 13rem; line-height: 70px; } 
+ .pst_sub1 { border-bottom: 1px solid var(--text1); } 
+ .pst ul { list-style: disc; } 
+ .project_box .general_btns { display: flex; justify-content: center; } 
+ .pst .h4 { font-size: 0.75rem; color: #535385; font-style: normal; font-weight: 900; line-height: normal; text-transform: uppercase; } 
+ .pst h5 { font-size: 2rem; color: #535385; font-style: normal; font-weight: 700; line-height: normal; }
+ .item .general_btns{
+    display: flex;
+    justify-content: center;
 }
 
-h1 .char8 {
-	margin-left: calc(var(--radius) * 2.15);
-	margin-top: calc(var(--radius) * 1.6);
-	animation-duration: calc(var(--animation-timing) * 1.15);
-	font-size: calc(var(--radius) * 1.3);
+/* skills */
+.row {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 80em;
+	padding: 1em;
 }
 
-@keyframes breathe {
-	0% {
-		transform: scale(1) rotate(0deg) skew(0deg, 0deg) translateY(0px);
-		opacity: 1;
-	}
-	25% {
-		transform: scale(1) rotate(3deg) skew(2deg, 2deg) translateY(2px);
-		opacity: 0.8;
-	}
-	50% {
-		transform: scale(1.2) rotate(-3deg) skew(-2deg, -2deg) translateY(-2px);
-		opacity: 1;
-	}
-	75% {
-		transform: scale(1.1) rotate(3deg) skew(2deg, 2deg) translateY(2px);
-		opacity: 0.8;
-	}
-	100% {
-		transform: scale(1) rotate(0deg) skew(0deg, 0deg) translateY(0px);
-	}
-	opacity: 1;
+.skill_box {
+	text-align: center;
+}
+
+code {
+	color: #f1e399;
+	font-style: italic;
+}
+
+/*** RADIAL PROGRESS ***/
+/* Circumference = 2πr */
+/* π = 3.1415926535898 */
+/* r = 35 */
+svg.radial-progress {
+	height: auto;
+	max-width: 200px;
+	padding: 1em;
+	transform: rotate(-90deg);
+	width: 100%;
+}
+
+svg.radial-progress circle {
+	fill: rgba(0, 0, 0, 0);
+	stroke: #fff;
+	stroke-dashoffset: 219.91148575129;
+	/* Circumference */
+	stroke-width: 10;
+}
+
+svg.radial-progress circle.incomplete {
+	opacity: 0.25;
+}
+
+svg.radial-progress circle.complete {
+	stroke-dasharray: 219.91148575129;
+	/* Circumference */
+}
+
+svg.radial-progress text {
+	fill: #fff;
+	font: 400 1em/1;
+	text-anchor: middle;
+}
+
+
+
+/*** COLORS ***/
+/* Primary */
+svg.radial-progress:nth-of-type(6n+1) circle {
+	stroke: #fddc32;
+}
+
+/* Secondary */
+svg.radial-progress:nth-of-type(6n+2) circle {
+	stroke: #fddc32;
+}
+
+/* Tertiary */
+svg.radial-progress:nth-of-type(6n+3) circle {
+	stroke: #fddc32;
+}
+
+/* Quaternary */
+svg.radial-progress:nth-of-type(6n+4) circle {
+	stroke: #fddc32;
+}
+
+/* Quinary */
+svg.radial-progress:nth-of-type(6n+5) circle {
+	stroke: #fddc32;
 }

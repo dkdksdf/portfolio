@@ -42,7 +42,6 @@ win.on('scroll', function () {
 //프로젝트박스
 
 const sectionss = $('section');
-console.log(sectionss);
 let speed = Math.floor(win.height() * 0.5);
 let topArr = [];
 let winSCT;
@@ -121,42 +120,5 @@ $(function(){
   }).trigger('scroll');
 
 });
-
-//스킬바
-$(() => {
-    const len = document.querySelector('svg circle').getTotalLength();
-    //628
-    const progressWrap = $('.chart');
-    const animationOST = $('.charts').offset().
-        top - 600;
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop() >= animationOST) {
-            if (!$('.charts').hasClass('active')){
-                animationChart();
-                $('.charts').addClass('active');
-            }
-        }
-    });
-    function animationChart() {
-        progressWrap.each(function () {
-            const item = $(this);
-            const title = item.find('h2');
-            const targetNum = title.attr('data-num');
-            const circle = item.find('circle');
-            $({ rate: 0 }).animate(
-                { rate: targetNum },
-                {
-                    duration: 1500,
-                    progress: function () {
-                        let now = this.rate;
-                        let amount = 630 - (630 * now) / 100;
-                        title.text(Math.floor(now));
-                        circle.css({strokeDashoffset:amount})
-                    }
-                }
-            )
-        });
-    }
-});//jQuery
 
 
