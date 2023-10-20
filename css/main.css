@@ -2,8 +2,25 @@
 
 .inner {width: 100%;max-width: 1440px;margin: auto; } 
 
+/* sideNav */
+.sideNav {position: fixed;top: 10%;right: 10%;z-index: 999; } 
+
+.sideNav a {display: inline-block;padding: 1em;background: rgba(0, 0, 0, 0.5);color: #fff;margin-bottom: 1em; } 
+
+.sideNav li.on a::before {content: '🐱'; } 
+
+/* header */
+.bold {color: var(--text2);font-size: 5.5625rem;font-style: normal;font-weight: 800;line-height: 7.25rem; } 
+
+.medium {color: var(--text2);font-size: 5.5625rem;font-style: normal;font-weight: 400;line-height: 7.25rem;/* 130.337% */}
+
+.light {color: var(--text2);font-size: 1.75rem;font-style: normal;font-weight: 500;line-height: normal; } 
+
+header {width: 100%; height: 100px;justify-content: space-between;line-height: 100px;display: flex;padding: 0 10rem;position: relative; } 
+
+.logo {width: 50%;justify-content: center;align-items: center; } 
 /* nav */
-nav {width: 100%;position: absolute;top: 0;z-index: 2;background: rgba(251, 248, 204, 0.5);padding: 1em 1.4em;width: 100%; } 
+nav {width: 100%;position: absolute;top: 0;z-index: 2;background: rgba(251, 248, 204, 0.5);padding: 1em 1.4em; } 
 
 nav.sticky {background: rgba(255, 0, 100, 0.6);position: fixed;z-index: 222; } 
 
@@ -24,24 +41,6 @@ nav .gnb li.on a:before,
 nav .gnb li a:hover:before,
 nav .gnb li.on a:after,
 nav .gnb li a:hover:after {transform: scaleX(1); } 
-
-/* sideNav */
-.sideNav {position: fixed;top: 10%;right: 10%;z-index: 999; } 
-
-.sideNav a {display: inline-block;padding: 1em;background: rgba(0, 0, 0, 0.5);color: #fff;margin-bottom: 1em; } 
-
-.sideNav li.on a::before {content: '🐱'; } 
-
-/* slogan */
-.bold {color: var(--text2);font-size: 5.5625rem;font-style: normal;font-weight: 800;line-height: 7.25rem; } 
-
-.medium {color: var(--text2);font-size: 5.5625rem;font-style: normal;font-weight: 400;line-height: 7.25rem;/* 130.337% */}
-
-.light {color: var(--text2);font-size: 1.75rem;font-style: normal;font-weight: 500;line-height: normal; } 
-
-header {height: 100px;justify-content: space-between;line-height: 100px;display: flex;padding: 0 10rem;position: relative; } 
-
-.logo {width: 50%;justify-content: center;align-items: center; } 
 
 /* content */
 .content_box1 {display: flex;justify-content: space-evenly;align-items: center; } 
@@ -142,6 +141,7 @@ header {height: 100px;justify-content: space-between;line-height: 100px;display:
  .item .general_btns { display: flex; justify-content: center; } 
 
 /* skills */
+.content_box4{height: 100vh;}
 .charts { width: 80%; margin: 3rem auto; display: flex; justify-content: center; } 
 
 .charts .chart { margin: 0 20px; position: relative; } 
@@ -165,4 +165,4 @@ header {height: 100px;justify-content: space-between;line-height: 100px;display:
 
 .charts .chart:nth-child(4) circle { stroke: #48ff48; } 
 
-.content { height: 4vh; } 
+ 
