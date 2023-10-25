@@ -64,6 +64,10 @@ win.on('scroll', () => {
 		sectionss.eq(2).addClass('is-animated').siblings().removeClass('is-animated');
 		pipScroll();
 	}
+	if (winSCT > topArr[3] - speed) {
+		sectionss.eq(3).addClass('is-animated').siblings().removeClass('is-animated');
+		pipScroll();
+	}
 });
 
 function pipScroll(params) {
