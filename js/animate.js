@@ -8,6 +8,12 @@ function scrollToSection(index) {
 	$('html,body').stop().animate({ scrollTop: offset }, 1000, 'easeOutCirc');
 }
 
+$(document).ready(function() {
+	$('a[href="#"]').on('click', function(e) {
+	  e.preventDefault();
+	});
+  });
+  
 //네비게이션
 gnb.on({
 	click: function (e) {
@@ -16,13 +22,7 @@ gnb.on({
 		scrollToSection(index);
 	},
 });
-sideNav.on({
-	click: function (e) {
-		e.preventDefault();
-		let index = $(this).index();
-		scrollToSection(index);
-	},
-});
+
 win.on('scroll', function () {
 	let sct = win.scrollTop();
 	sections.each(function (i) {
@@ -35,19 +35,15 @@ win.on('scroll', function () {
 	sct > 400 ? $('nav').addClass('sticky') : $('nav').removeClass('sticky');
 });
 
-//슬로건박스
-
 //프로젝트박스
 
 const sectionss = $('section');
-console.log(sectionss);
 let speed = Math.floor(win.height() * 0.5);
 let topArr = [];
 let winSCT;
 //sections.offsetTop
 sectionss.each(function (i, o) {
     const sectionTop = $(o).offset().top;
-    console.log(sectionTop);
 	topArr.push(sectionTop);
 });
 win.on('scroll', () => {
@@ -77,7 +73,6 @@ function pipScroll(params) {
 		const screen = device.find('.screen');
 		const mask = device.find('.mask');
 		const hightDifference = screen.innerHeight() - mask.innerHeight();
-		console.log(hightDifference);
 		device.on({
 			mouseenter: function () {
 				screen.stop().animate({ top: -hightDifference }, 1000);
@@ -127,3 +122,22 @@ $(() => {
 		});
 	}
 }); //jQuery
+
+// logodesign
+const pics=$(".pic");
+const lightbox=$("#lightbox");
+const lightImg=$("#lightImage");
+
+pics.on('click',function(){
+    const bigLocation=$(this).attr("data-src");
+    lightImg.load(bigLocation);
+    lightbox.css('display', 'block');
+    $('html').addClass('all_scrollFixed');
+});
+lightbox.on('click', function(){
+    lightbox.css('display','none');
+    $('html').removeClass('all_scrollFixed');
+});
+$('.top_btn').click(function() {
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+  });
