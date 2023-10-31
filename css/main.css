@@ -5,7 +5,7 @@
 /* header */
 .bold { color: var(--text2); font-size: 5.5625rem; font-style: normal; font-weight: 800; line-height: 7.25rem; } 
 
-.medium { color: var(--text2); font-size: 5.5625rem; font-style: normal; font-weight: 400; line-height: 7.25rem; /* 130.337% */}
+.medium { color: var(--text2); font-size: 5.5625rem; font-style: normal; font-weight: 400; line-height: 7.25rem; /* 130.337% */ } 
 
 .light { color: var(--text2); font-size: 1.75rem; font-style: normal; font-weight: 500; line-height: normal; } 
 
@@ -79,7 +79,7 @@ nav .gnb li a:hover:after { transform: scaleX(1); }
 
 .resum_box { width: 100%; height: 400px; display: flex; gap: 50px; justify-content: space-between; text-align: left; } 
 
-.resum_text { display: flex; padding: 0px 32px; flex-direction: column; align-items: flex-start; gap: 0.625rem; align-self: stretch; font-size: 1.5rem; font-style: normal; font-weight: 400; line-height: 49.875px; /* 207.813% */}
+.resum_text { display: flex; padding: 0px 32px; flex-direction: column; align-items: flex-start; gap: 0.625rem; align-self: stretch; font-size: 1.5rem; font-style: normal; font-weight: 400; line-height: 49.875px; /* 207.813% */ } 
 
 .resum_text h3 { position: relative; } 
 
@@ -183,14 +183,17 @@ nav .gnb li a:hover:after { transform: scaleX(1); }
  to { stroke-dashoffset: 0; } 
  }
 
-/* logodesign */
-.design_box { text-align: center; width: 50%; position: relative; overflow: hidden; margin: auto; } 
+/* design */
+.design { display: flex; } 
+.design_box { text-align: center; width: 100%; position: relative; overflow: hidden; margin: auto; } 
 
 .design_box img { width: 100%; transition: all 0.5s; padding: 1rem; } 
 
 .design_box .caption { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: all 0.5s; background: rgba(0, 0, 0, 0); color: white; overflow: hidden; } 
+.design_text { display: flex; } 
+.design_text p{ font-size: 1.5rem; font-style: normal; font-weight: 600; line-height: 2.75rem; } 
 
-.design_box:hover img { transform: scale(1.1); padding: 1rem;} 
+.design_box:hover img { transform: scale(1.1); padding: 1rem; } 
 
 .design_box:hover .caption { opacity: 1; background: rgba(0, 0, 0, 0.5); } 
 
