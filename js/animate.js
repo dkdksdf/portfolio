@@ -13,7 +13,7 @@ $(document).ready(function() {
 	  e.preventDefault();
 	});
   });
-  
+
 //네비게이션
 gnb.on({
 	click: function (e) {
@@ -48,13 +48,13 @@ sectionss.each(function (i, o) {
 });
 win.on('scroll', () => {
 	winSCT = win.scrollTop();
-	if (winSCT > topArr[0] - speed) {
+/* 	if (winSCT > topArr[0] - speed) {
 		sectionss.eq(0).addClass('is-animated').siblings().removeClass('is-animated');
 	}
 
 	if (winSCT > topArr[1] - speed) {
 		sectionss.eq(1).addClass('is-animated').siblings().removeClass('is-animated');
-	}
+	} */
 
 	if (winSCT > topArr[2] - speed) {
 		sectionss.eq(2).addClass('is-animated').siblings().removeClass('is-animated');
@@ -65,8 +65,7 @@ win.on('scroll', () => {
 		pipScroll();
 	}
 });
-
-function pipScroll(params) {
+function pipScroll() {
 	const devices = ['.mockup.pc', '.mockup.mobile', '.mockup.tablet'];
 	$.each(devices, function (i, deviceEl) {
 		const device = $(deviceEl);
