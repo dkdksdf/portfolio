@@ -64,6 +64,10 @@ win.on('scroll', () => {
 		sectionss.eq(3).addClass('is-animated').siblings().removeClass('is-animated');
 		pipScroll();
 	}
+	if (winSCT > topArr[4] - speed) {
+		sectionss.eq(4).addClass('is-animated').siblings().removeClass('is-animated');
+		pipScroll();
+	}
 });
 function pipScroll() {
 	const devices = ['.mockup.pc', '.mockup.mobile', '.mockup.tablet'];
