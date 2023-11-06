@@ -124,8 +124,8 @@ $(() => {
 
 // logodesign
 const pics=$(".pic");
-const lightbox=$("#lightbox");
-const lightImg=$("#lightImage");
+const lightbox=$(".lightbox");
+const lightImg=$(".lightImage");
 
 pics.on('click',function(){
     const bigLocation=$(this).attr("data-src");
