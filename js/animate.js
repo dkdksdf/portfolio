@@ -41,20 +41,19 @@ const sectionss = $('section');
 let speed = Math.floor(win.height() * 0.5);
 let topArr = [];
 let winSCT;
-//sections.offsetTop
 sectionss.each(function (i, o) {
     const sectionTop = $(o).offset().top;
 	topArr.push(sectionTop);
 });
 win.on('scroll', () => {
 	winSCT = win.scrollTop();
-/* 	if (winSCT > topArr[0] - speed) {
+	/* if (winSCT > topArr[0] - speed) {
 		sectionss.eq(0).addClass('is-animated').siblings().removeClass('is-animated');
-	}
+	} */
 
 	if (winSCT > topArr[1] - speed) {
 		sectionss.eq(1).addClass('is-animated').siblings().removeClass('is-animated');
-	} */
+	}
 
 	if (winSCT > topArr[2] - speed) {
 		sectionss.eq(2).addClass('is-animated').siblings().removeClass('is-animated');
@@ -64,10 +63,7 @@ win.on('scroll', () => {
 		sectionss.eq(3).addClass('is-animated').siblings().removeClass('is-animated');
 		pipScroll();
 	}
-	if (winSCT > topArr[4] - speed) {
-		sectionss.eq(4).addClass('is-animated').siblings().removeClass('is-animated');
-		pipScroll();
-	}
+	
 });
 function pipScroll() {
 	const devices = ['.mockup.pc', '.mockup.mobile', '.mockup.tablet'];
