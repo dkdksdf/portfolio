@@ -116,7 +116,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* custom */
 *a { box-sizing: border-box; } 
 
-:root { --primary: #ff4713; --secondary: #fbc9a0; --text1: #1D1D28; --text2: #03045E; --Too-Light-Yellow: #F7F197; --background: #FBF8CC; } 
+:root { --primary: #F5EE84; --secondary: ##03045E; --text1: #1D1D28; --text2: #03045E; --Too-Light-Yellow: #F7F197; --background: #FBF8CC; } 
 
 html { overflow-y: scroll; overflow-x: hidden; font-size: 62.5%; line-height: 1.75; font-weight: 400; } 
 
