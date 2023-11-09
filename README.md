@@ -16,7 +16,7 @@
 
 ### 프로토타입
 
-[❤ 피그마프로토타입 보러가기](https://www.figma.com/file/VhTH0qqvo7ZNbFcKXFI72p/%EB%AC%B8%EB%8B%A4%EC%97%B0?type=design&node-id=0%3A1&mode=design&t=N4HMUn8uBWyI76hb-1)
+[❤ 피그마프로토타입 보러가기](https://www.figma.com/proto/VhTH0qqvo7ZNbFcKXFI72p/%EB%AC%B8%EB%8B%A4%EC%97%B0?page-id=0%3A1&type=design&node-id=0-3&viewport=354%2C459%2C0.38&t=0vwFmHn8kfVUx4cj-1&scaling=scale-down-width&mode=design)
 
 
 
