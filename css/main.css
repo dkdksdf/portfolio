@@ -96,13 +96,17 @@ nav .gnb li a:hover:after { transform: scaleX(1); }
 @media screen and (max-width: 700px){
  .content_box1 { flex-direction: column; align-items: center; } 
 
- .slogan_box { text-align: center; align-items: center; justify-content: center; padding: 4rem 0; gap: 0.6875rem; } 
+ .slogan_box { padding: 3rem 0; } 
 
  .slogan_box p { margin-bottom: 1.5rem; } 
 
  .general_btns { flex-direction: column; gap: 1.5rem; } 
 
  .general_btns a { height: 3.5rem; line-height: 3.5rem; top: 103px; left: 105%; } 
+ .img { padding-top: 3rem; }
+  .img:before { top: 3rem; left: 3rem; width: 200px; height: 200px; }
+  .main_img2::before { top: 124px; left: 9%; }
+  .main_img2 { top: 70px; }
 
  .main_img { position: relative; top: -184px; left: 9%; } 
 
@@ -347,7 +351,7 @@ main .photos { height:100rem; width: 100%; }
 .lightbox_container .top .lightbox_close_btn { float: right; margin-right: 2rem; line-height: 50px; font-size: 4rem; cursor: pointer; } 
 .lightbox .modal_box { position: relative; height: calc(100% - 50px); overflow-y: scroll; overflow-x: hidden; } 
 .lightImage { left: 50%; position: fixed; width: 80%; transform: translateX(-50%); height: 80vh; top: 100px; overflow-y: auto; z-index: 999; background: #fff; }
-.lightbox:hover nav.sticky{display: none;}
+
 
 
 .design_text_box{display: flex; justify-content: space-around;}
